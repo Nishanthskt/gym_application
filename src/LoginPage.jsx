@@ -1,7 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './LoginPage.css';
 
 const LoginPage = () => {
+    const navigate = useNavigate();
+
+    const handleLogin = () => {
+      // Add your login validation here (optional)
+      navigate('/home'); // Navigate to HomePage
+    };
   return (
     <div className="login-page">
       <header className="header">
@@ -20,7 +27,7 @@ const LoginPage = () => {
           <form>
             <input type="text" placeholder="User ID" />
             <input type="password" placeholder="Password" />
-            <button type="submit">Login</button>
+            <button type="submit" onClick={handleLogin}>Login</button>
           </form>
           <p>Already Registered? <a href="#login">Login</a></p>
         </div>
