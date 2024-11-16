@@ -73,7 +73,7 @@
 }
 
 /* Content */
-.content {
+.content1 {
   text-align: center;
   width: 200px;
 }
@@ -117,4 +117,68 @@
 
 .start-button:hover {
   background-color: #7e9478;
+}
+/* Media Query for Mobile View */
+@media (max-width: 768px) {
+  /* Header */
+  .header {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .logo-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .brand-name {
+    font-size: 20px;
+    margin-left: 8px;
+  }
+
+  .nav-links {
+    margin-top: 10px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+    margin: 0 8px;
+  }
+
+  .settings-button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  /* Hero Section */
+  .hero-image {
+    height: 200px;
+    object-fit: cover;
+  }
+
+  /* Content */
+  .content {
+    padding: 15px;
+  }
+
+  .content h1 {
+    font-size: 24px;
+  }
+
+  .workout-gallery {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .workout-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .start-button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
 }

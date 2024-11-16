@@ -25,7 +25,7 @@ const HomePage = () => {
         <div className="hero-section">
           <img src={heroImage} alt="Hero" className="hero-image" />
         </div>
-        <div className="content">
+        <div className="content1">
           <div className="content_andbutton">
           <h1>Let's start to workout</h1>
           <button className="start-button">start</button>
