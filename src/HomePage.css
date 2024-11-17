@@ -74,8 +74,8 @@
 
 /* Content */
 .content1 {
-  text-align: center;
-  width: 200px;
+  display: flex;
+  width: 400px;
 }
 
 .content h1 {
@@ -113,6 +113,7 @@
   border-radius: 5px;
   cursor: pointer;
   bottom: 20px;
+  margin-top: 30px;
 }
 
 .start-button:hover {
@@ -121,64 +122,105 @@
 /* Media Query for Mobile View */
 @media (max-width: 768px) {
   /* Header */
-  .header {
-    flex-direction: column;
+  .header1 {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    padding: 15px;
+    padding: 10px;
+    width: 90%;
+    background-color: #f7f7f7;
+  }
+  .logo-container {
+    display: flex;
+    align-items: center;
   }
 
-  .logo-container {
-    flex-direction: row;
-    justify-content: center;
+  .logo {
+    width: 30px; /* Smaller logo size */
+    height: 30px;
   }
 
   .brand-name {
-    font-size: 20px;
+    font-size: 16px; /* Adjusted font size for mobile view */
     margin-left: 8px;
   }
 
   .nav-links {
-    margin-top: 10px;
+    display: flex;
+    gap: 8px;
+    font-size: 14px;
   }
 
   .nav-links a {
-    font-size: 14px;
-    margin: 0 8px;
+    text-decoration: none;
+    color: #000;
+    padding: 5px 10px;
   }
 
   .settings-button {
-    margin-top: 10px;
-    padding: 8px 12px;
-    font-size: 12px;
+    display: none; /* Hide settings button */
   }
 
   /* Hero Section */
   .hero-image {
-    height: 200px;
+    width: 90%;
+    height: 180px;
     object-fit: cover;
   }
 
-  /* Content */
-  .content {
+  /* Content Section */
+  .content1 {
+    display: block;
     padding: 15px;
   }
-
   .content h1 {
-    font-size: 24px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    white-space: nowrap; /* Keep content in a single line */
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .workout-gallery {
-    flex-direction: column;
-    gap: 15px;
+    display: block;
+    gap: 10px;
+    justify-content: center;
   }
 
   .workout-image {
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
 
+  /* Start Button */
   .start-button {
-    padding: 8px 16px;
+    width: 80%; /* Centered and responsive */
+    max-width: 200px;
+    padding: 10px 0;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin: 20px auto; /* Add space below the content */
+    cursor: pointer;
+  }
+
+  .start-button:hover {
+    background-color: #45a049;
+  }
+
+  /* Footer */
+   footer {
+    position: static;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #000;
+    color: white;
+    padding: 10px 0;
     font-size: 14px;
   }
-}
+} 
+
