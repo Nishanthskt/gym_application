@@ -1,13 +1,14 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './LoginPage.css';
+import './GenderSelectionPage'
 
 const LoginPage = () => {
     const navigate = useNavigate();
 
     const handleLogin = () => {
       // Add your login validation here (optional)
-      navigate('/home'); // Navigate to HomePage
+      navigate('/gender-selection'); 
     };
   return (
     <div className="login-page">
