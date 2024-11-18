@@ -1,0 +1,98 @@
+/* Container */
+.bmi-container {
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Title */
+  h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Input Container */
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  label {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    padding: 10px;
+    font-size: 14px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Buttons */
+  .calculate-button,
+  .next-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .calculate-button:hover,
+  .next-button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Speedometer */
+  .speedometer {
+    width: 150px;
+    height: 75px;
+    border: 5px solid #4caf50;
+    border-radius: 150px 150px 0 0;
+    position: relative;
+    margin: 20px auto;
+    overflow: hidden;
+  }
+  
+  .needle {
+    width: 5px;
+    height: 70px;
+    background-color: #ff0000;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform-origin: bottom center;
+    transition: transform 1s ease-out;
+  }
+  
+  /* BMI Result */
+  .bmi-result {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .bmi-result p {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  

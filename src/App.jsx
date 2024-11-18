@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoginPage from "./LoginPage";
 import GenderSelectionPage from "./GenderSelectionPage";
+import BMICalculatorPage from "./BMICalculatorPage";
 import HomePage from "./HomePage";
 
 const App = () => {
@@ -10,6 +11,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<LoginPage />} />
         <Route path="/gender-selection" element={<GenderSelectionPage />} />
+        <Route path="/bmi-calculator" element={<BMICalculatorPage />} />
         <Route path="/home" element={<HomePage />} />
       </Routes>
     </Router>
