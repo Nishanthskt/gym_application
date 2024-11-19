@@ -21,7 +21,7 @@ const BMICalculatorPage = () => {
   };
 
   const handleNext = () => {
-    navigate("/home"); // Navigate to the Home Page
+    navigate("/veg-nonveg"); 
   };
 
   return (

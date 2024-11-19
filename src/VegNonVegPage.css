@@ -1,0 +1,75 @@
+.veg-nonveg-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #f0f0f0, #d8e3e7);
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 30px;
+  }
+  
+  .options-container {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .option-card {
+    width: 150px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    background-color: #ffffff;
+    overflow: hidden;
+  }
+  
+  .option-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .selected {
+    border: 3px solid #4caf50;
+  }
+  
+  .option-image {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .option-label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+  }
+  
+  .next-button {
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .next-button:hover {
+    background-color: #45a049;
+  }
+  
