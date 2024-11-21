@@ -24,7 +24,7 @@ const VegAndNonVegPage = () => {
 
   return (
     <div className="veg-nonveg-container">
-      <header className="header">
+      <header className="header3">
         <h1 className="title">BUFFALO</h1>
       </header>
         <h2 className='tittle2'>What Type Food You Prefer For ?</h2>

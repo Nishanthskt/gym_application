@@ -14,7 +14,7 @@ const GenderSelectionPage = () => {
 
   const handleNextClick = () => {
     if (selectedGender) {
-      navigate("/bmi-calculator"); // Navigate to the HomePage after selecting a gender
+      navigate("/body-selection"); 
     } else {
       alert("Please select a gender!");
     }
