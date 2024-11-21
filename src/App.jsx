@@ -6,6 +6,7 @@ import BMICalculatorPage from "./BMICalculatorPage";
 import HomePage from "./HomePage";
 import VegNonVegPage from "./vegNonVegPage";
 import BodyTypeSelectionPage from "./BodyTypeSelectionPage";
+import AgePage from "./AgePage";
 
 const App = () => {
   return (
@@ -13,9 +14,10 @@ const App = () => {
       <Routes>
         <Route path="/" element={<LoginPage />} />
         <Route path="/gender-selection" element={<GenderSelectionPage />} />
-        <Route path="/bmi-calculator" element={<BMICalculatorPage />} />
         <Route path="/body-selection" element={<BodyTypeSelectionPage/>}/>
+        <Route path="/bmi-calculator" element={<BMICalculatorPage />} />
         <Route path="/veg-nonveg" element={<VegNonVegPage/>}/>
+        <Route path="/age-page" element={<AgePage/>}/>
         <Route path="/home" element={<HomePage />} />
       </Routes>
     </Router>

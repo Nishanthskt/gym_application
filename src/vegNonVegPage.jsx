@@ -16,7 +16,7 @@ const VegAndNonVegPage = () => {
   const handleNext = () => {
     if (selectedOption) {
       console.log(`Selected Option: ${selectedOption}`);
-      navigate('/home'); // Navigate to the Home page
+      navigate('/age-page'); // Navigate to the Home page
     } else {
       alert('Please select an option before proceeding.');
     }

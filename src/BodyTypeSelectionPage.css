@@ -107,7 +107,7 @@ body {
   }
   
   .next-btn {
-    background-color: #ff4b4b;
+    background-color: #4caf50;
     color: white;
     font-size: 18px;
     padding: 10px 30px;
@@ -118,6 +118,6 @@ body {
   }
   
   .next-btn:hover {
-    background-color: #e04343;
+    background-color: #45a049;
   }
   

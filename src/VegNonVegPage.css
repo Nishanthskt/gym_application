@@ -99,7 +99,7 @@
 .next-btn {
   width: 100%;
   padding: 15px;
-  background-color: #e53935;
+  background-color: #4caf50;
   color: white;
   border: none;
   border-radius: 30px;
@@ -109,7 +109,7 @@
 }
 
 .next-btn:hover {
-  background-color: #d32f2f;
+  background-color: #45a049;
 }
 
 /* Responsive Design */
