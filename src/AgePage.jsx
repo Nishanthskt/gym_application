@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./AgePage.css";
 import AgebgImg from './assets/agepage.jpg';
+import { FaAngleRight } from "react-icons/fa";
 
 const AgePage = () => {
   const [age, setAge] = useState(""); // Store the selected age
@@ -37,7 +38,7 @@ const AgePage = () => {
             onChange={(e) => setAge(e.target.value)}
           />
           <button className="next-btn1" onClick={handleNext}>
-            <i className="fas fa-arrow-right"></i>
+            <i className="fas fa-arrow-right"><FaAngleRight/></i>
           </button>
         </div>
       </main>
