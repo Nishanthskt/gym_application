@@ -46,7 +46,7 @@
 }
 
 .calculate-btn,
-.next-btn {
+.next-btn2 {
   margin-top: 20px;
   padding: 10px 20px;
   font-size: 18px;
@@ -59,10 +59,10 @@
 }
 
 .calculate-btn:hover,
-.next-btn:hover {
+.next-btn2:hover {
   background-color: #45a049;
 }
-.next-btn{
+.next-btn2{
   margin-top: 20px;
 }
 

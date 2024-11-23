@@ -78,7 +78,7 @@ const BMIPage = () => {
       )}
 
       {/* Next Button */}
-      <button className="next-btn" onClick={handleNext}>
+      <button className="next-btn2" onClick={handleNext}>
         Next
       </button>
     </div>
