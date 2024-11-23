@@ -1,72 +1,88 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./BMICalculatorPage.css";
+import "./BMICalculatorPage.css"
+import WeightImg from './assets/weightBmi.jpg'
+import HeightImg from './assets/heightBmi.jpg'
 
-const BMICalculatorPage = () => {
-  const [weight, setWeight] = useState("");
-  const [height, setHeight] = useState("");
-  const [bmi, setBmi] = useState(null);
-  const [showSpeedometer, setShowSpeedometer] = useState(false);
+const BMIPage = () => {
+  const [weight, setWeight] = useState(""); // State for weight input
+  const [height, setHeight] = useState(""); // State for height input
+  const [bmi, setBMI] = useState(null); // State for BMI calculation
   const navigate = useNavigate();
 
-  const calculateBMI = () => {
+  const handleCalculateBMI = () => {
     if (weight && height) {
-      const heightInMeters = height / 100;
-      const calculatedBMI = (weight / (heightInMeters * heightInMeters)).toFixed(1);
-      setBmi(calculatedBMI);
-      setShowSpeedometer(true);
+      const heightInMeters = height / 100; // Convert height to meters
+      const calculatedBMI = (weight / (heightInMeters * heightInMeters)).toFixed(2);
+      setBMI(calculatedBMI);
     } else {
-      alert("Please enter valid weight and height!");
+      alert("Please enter both weight and height!");
     }
   };
 
   const handleNext = () => {
-    navigate("/veg-nonveg"); 
+    if (bmi) {
+      console.log(`BMI Calculated: ${bmi}`);
+      navigate("/veg-nonveg"); // Navigate to the Home page
+    } else {
+      alert("Please calculate your BMI before proceeding!");
+    }
   };
 
   return (
-    <div className="bmi-container">
-      <h1>BMI Calculator</h1>
-      <div className="input-container">
-        <div className="input-group">
-          <label>Weight (kg):</label>
+    <div className="bmi-page-container">
+      <h1 className="bmi-header">Calculate Your BMI</h1>
+
+      <div className="bmi-section">
+        {/* Weight Section */}
+        <div className="bmi-input-section">
+          <img
+            src={WeightImg}
+            alt="Weight"
+            className="bmi-image"
+          />
           <input
             type="number"
+            placeholder="Enter weight (kg)"
+            className="bmi-input"
             value={weight}
             onChange={(e) => setWeight(e.target.value)}
-            placeholder="Enter your weight"
           />
         </div>
-        <div className="input-group">
-          <label>Height (cm):</label>
+
+        {/* Height Section */}
+        <div className="bmi-input-section">
+          <img
+            src={HeightImg}
+            alt="Height"
+            className="bmi-image"
+          />
           <input
             type="number"
+            placeholder="Enter height (cm)"
+            className="bmi-input"
             value={height}
             onChange={(e) => setHeight(e.target.value)}
-            placeholder="Enter your height"
           />
         </div>
       </div>
-      <button className="calculate-button" onClick={calculateBMI}>
-        Calculate
-      </button>
 
-      {showSpeedometer && (
+      {/* BMI Calculation and Results */}
+      <button className="calculate-btn" onClick={handleCalculateBMI}>
+        Calculate BMI
+      </button>
+      {bmi && (
         <div className="bmi-result">
-          <div className="speedometer">
-            <div
-              className="needle"
-              style={{ transform: `rotate(${bmi * 2}deg)` }}
-            ></div>
-          </div>
-          <p>Your BMI is: <strong>{bmi}</strong></p>
-          <button className="next-button" onClick={handleNext}>
-            Next
-          </button>
+          <p>Your BMI: <strong>{bmi}</strong></p>
         </div>
       )}
+
+      {/* Next Button */}
+      <button className="next-btn" onClick={handleNext}>
+        Next
+      </button>
     </div>
   );
 };
 
-export default BMICalculatorPage;
+export default BMIPage;
