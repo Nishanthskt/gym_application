@@ -1,3 +1,6 @@
+/* Slick Carousel CSS */
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
 /* General Reset */
 * {
   margin: 0;
@@ -6,221 +9,309 @@
   font-family: "Arial", sans-serif;
 }
 
+/* Homepage Layout */
 .homepage {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #f9f9f9;
+  background-color: #eafaf1;
+  padding: 10px;
 }
 
-/* Header */
+/* Header Section */
 .header1 {
-  width: 100%;
-  height: 90px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap; /* Allow elements to wrap for smaller screens */
   padding: 10px 20px;
-  background-color: white;
-  border-bottom: 1px solid #ddd;
+  background-color: #0aa356;
+  color: white;
 }
 
-.logo-container1 {
+.header-left {
   display: flex;
   align-items: center;
+  flex: 1; /* Adjust spacing for mobile */
 }
 
-.logo1 {
-  width: 100px;
-  height: 100px;
+.menu-icon {
+  background: none;
+  border: none;
+  font-size: 24px;
+  margin-right: 10px;
+  cursor: pointer;
+  color: white;
 }
 
 .brand-name {
-  font-size: 24px;
+  margin-top: 20px;
+  font-size: 18px;
   font-weight: bold;
-  margin-left: 10px;
 }
 
-.nav-links a {
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
-  color: black;
-}
-
-.settings-button {
-  background-color: #91a78b;
-  color: white;
-  border: none;
-  padding: 8px 15px;
-  font-size: 14px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.settings-button:hover {
-  background-color: #7e9478;
-}
-
-/* Hero Section */
-.hero-section {
-  width: 100%;
-}
-
-.hero-image {
-  width: 90vw;
-  height: 350px;
-}
-
-/* Content */
-.content1 {
+.search-bar-container {
+  flex: 2;
   display: flex;
-  width: 400px;
-}
-
-.content h1 {
-  font-size: 32px;
-  margin-bottom: 20px;
-  margin-left: 0;
-  padding: 10px;
-}
-.content_andbutton{
-  width: 100vw;
-}
-
-.workout-gallery {
-  display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 20px;
-  margin: 20px 20px 20px 20px;
 }
 
-.workout-image {
-  width: 250px;
-  height: 200px;
+.search-bar {
+  width: 60%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  outline: none;
+}
+
+.search-icon {
+  background: none;
+  border: none;
+  font-size: 20px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.header-right button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 10px;
+  color: white;
+}
+
+/* Slider Section Styling */
+.welcome-section {
+  margin: 20px;
+}
+
+.welcome-image {
+  width: 100vw;
+  max-height: 300px;
   border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
 }
 
-.start-button {
-  background-color: #91a78b;
+.slide-container {
+  text-align: center;
+
+}
+
+.slick-dots {
+  bottom: -20px;
+}
+
+.slick-dots li button:before {
+  color: #0aa356;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #ff5252;
+}
+
+/* Discount Buttons */
+.discount {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.discount button {
+  background-color: #ff5252;
   color: white;
   border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  height: 40px;
-  width: 100px;
   border-radius: 5px;
+  padding: 8px 12px;
+  font-size: 14px;
   cursor: pointer;
-  bottom: 20px;
-  margin-top: 30px;
 }
 
-.start-button:hover {
-  background-color: #7e9478;
+
+/* Navigation Buttons */
+.nav-buttons {
+  display: flex;
+  justify-content: space-evenly; /* Space buttons evenly */
+  margin: 20px 0;
 }
-/* Media Query for Mobile View */
+
+.nav-button {
+  flex: 1;
+  margin: 0 5px;
+  padding: 10px 0;
+  background-color: white;
+  color: #0aa356;
+  border: 1px solid #0aa356;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
+
+.nav-button:hover {
+  background-color: #0aa356;
+  color: white;
+}
+
+/* Card Section */
+.card-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.card {
+  background-color: white;
+  width: fit-content;
+  height: 350px;
+  border-radius: 10px;
+  padding: 10px;
+  position: relative;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+}
+
+.card p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.favorite-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: red;
+  cursor: pointer;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-  /* Header */
-  .header1 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    width: 90%;
-    background-color: #f7f7f7;
-  }
-  .logo-container {
-    display: flex;
-    align-items: center;
+  .header {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: flex-start;
   }
 
-  .logo {
-    width: 30px; /* Smaller logo size */
-    height: 30px;
+  .search-bar-container {
+    width: 100%;
+    margin-top: 10px;
   }
-
-  .brand-name {
-    font-size: 16px; /* Adjusted font size for mobile view */
-    margin-left: 8px;
+  .search-icon{
+    display: none;
   }
-
-  .nav-links {
-    display: flex;
-    gap: 8px;
-    font-size: 14px;
-  }
-
-  .nav-links a {
-    text-decoration: none;
-    color: #000;
-    padding: 5px 10px;
-  }
-
-  .settings-button {
-    display: none; /* Hide settings button */
-  }
-
-  /* Hero Section */
-  .hero-image {
-    width: 90%;
-    height: 180px;
-    object-fit: cover;
-  }
-
-  /* Content Section */
-  .content1 {
-    display: block;
-    padding: 15px;
-  }
-  .content h1 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    white-space: nowrap; /* Keep content in a single line */
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  .workout-gallery {
-    display: block;
-    gap: 10px;
+  .welcome-section {
+    margin: 20px 0;
+    height: fit-content;
     justify-content: center;
   }
-
-  .workout-image {
-    width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  
+  .welcome-image {
+    width: 100vw;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
   }
-
-  /* Start Button */
-  .start-button {
-    width: 80%; /* Centered and responsive */
-    max-width: 200px;
-    padding: 10px 0;
-    font-size: 16px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    margin: 20px auto; /* Add space below the content */
-    cursor: pointer;
-  }
-
-  .start-button:hover {
-    background-color: #45a049;
-  }
-
-  /* Footer */
-   footer {
-    position: static;
-    bottom: 0;
-    width: 100%;
+  
+  .slide-container {
     text-align: center;
-    background-color: #000;
-    color: white;
-    padding: 10px 0;
-    font-size: 14px;
+    display: none;
+  
   }
-} 
+  
+  .slick-dots {
+    bottom: -20px;
+    display: none;
+  }
+  .card-section {
+    grid-template-columns:repeat(2,1fr) ; /* Two-column layout for smaller screens */
+    justify-content: center;
+  }
+  .card{
+    width: 250;
+    height: 250px;
+    margin-left: 20px;
+  }
+  .card img{
+    width: 200px;
+    height: 200px;
+  }
 
+  .discount button {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-bar-container {
+    margin: 10px 0;
+  }
+
+  .welcome-text h2 {
+    font-size: 16px;
+  }
+  .search-icon{
+    display: none;
+  }
+  .welcome-section {
+    margin: 20px 0;
+    height: fit-content;
+    justify-content: center;
+  }
+  
+  .welcome-image {
+    width: 100vw;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  .slide-container {
+    text-align: center;
+    display: block;
+  
+  }
+  
+  .slick-dots {
+    display: none;
+    bottom: -20px;
+  }
+  .card-section {
+    grid-template-columns:repeat(2,1fr) ; /* Two-column layout for smaller screens */
+    justify-content: center;
+  }
+  .card{
+    width: 150;
+    height: 150px;
+    margin-left: 20px;
+  }
+  .card img{
+    width: 100px;
+    height: 100px;
+  }
+  .discount button {
+    font-size: 10px;
+    padding: 5px 8px;
+  }
+
+  .card p {
+    font-size: 12px;
+  }
+
+  .favorite-button {
+    font-size: 16px;
+  }
+}
