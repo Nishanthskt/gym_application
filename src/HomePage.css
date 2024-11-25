@@ -91,7 +91,7 @@
 }
 
 .welcome-image {
-  width: 100vw;
+  width:100vw;
   max-height: 300px;
   border-radius: 10px;
   object-fit: cover;
@@ -230,7 +230,9 @@
     display: none;
   
   }
-  
+  .welcome-text{
+    margin-top: 20px;
+  }
   .slick-dots {
     bottom: -20px;
     display: none;
