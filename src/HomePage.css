@@ -24,9 +24,10 @@
   padding: 10px 20px;
   background-color: #0aa356;
   color: white;
+  border-radius: 7px;
 }
 
-.header-left {
+ .header-left {
   display: flex;
   align-items: center;
   flex: 1; /* Adjust spacing for mobile */
@@ -45,6 +46,7 @@
   margin-top: 20px;
   font-size: 18px;
   font-weight: bold;
+  display: flex;
 }
 
 .search-bar-container {

@@ -7,6 +7,7 @@ import HomePage from "./HomePage";
 import VegNonVegPage from "./vegNonVegPage";
 import BodyTypeSelectionPage from "./BodyTypeSelectionPage";
 import AgePage from "./AgePage";
+import ChatPage from "./ChatPage";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/bmi-calculator" element={<BMICalculatorPage />} />
         <Route path="/veg-nonveg" element={<VegNonVegPage/>}/>
         <Route path="/age-page" element={<AgePage/>}/>
+        <Route path="/chat-ai" element={<ChatPage/>}/>
         <Route path="/home" element={<HomePage />} />
       </Routes>
     </Router>
