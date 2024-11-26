@@ -11,7 +11,7 @@
 
 /* Homepage Layout */
 .homepage {
-  background-color: #eafaf1;
+ background-color: #c7e7d8;
   padding: 10px;
 }
 
@@ -20,18 +20,28 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap; /* Allow elements to wrap for smaller screens */
-  padding: 10px 20px;
-  background-color: #0aa356;
-  color: white;
-  border-radius: 7px;
+  padding: 10px;
+  background-color: #c7e7d8;
 }
 
- .header-left {
+.header-right {
   display: flex;
   align-items: center;
-  flex: 1; /* Adjust spacing for mobile */
+  gap: 15px;
 }
+
+.chat-ai-icon {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: transform 0.2s;
+}
+
+.chat-ai-icon:hover {
+  transform: scale(1.1);
+}
+
 
 .menu-icon {
   background: none;
@@ -43,10 +53,8 @@
 }
 
 .brand-name {
-  margin-top: 20px;
   font-size: 18px;
   font-weight: bold;
-  display: flex;
 }
 
 .search-bar-container {
@@ -134,32 +142,6 @@
   cursor: pointer;
 }
 
-
-/* Navigation Buttons */
-.nav-buttons {
-  display: flex;
-  justify-content: space-evenly; /* Space buttons evenly */
-  margin: 20px 0;
-}
-
-.nav-button {
-  flex: 1;
-  margin: 0 5px;
-  padding: 10px 0;
-  background-color: white;
-  color: #0aa356;
-  border: 1px solid #0aa356;
-  border-radius: 5px;
-  font-weight: bold;
-  text-align: center;
-  cursor: pointer;
-}
-
-.nav-button:hover {
-  background-color: #0aa356;
-  color: white;
-}
-
 /* Card Section */
 .card-section {
   display: grid;
@@ -195,9 +177,12 @@
   right: 10px;
   background: none;
   border: none;
-  font-size: 18px;
-  color: red;
   cursor: pointer;
+}
+
+.like-icon {
+  width: 20px;
+  height: 20px;
 }
 
 /* Responsive Design */

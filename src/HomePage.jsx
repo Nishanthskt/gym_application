@@ -1,37 +1,26 @@
 import React from "react";
 import Slider from "react-slick";
+import { useNavigate } from "react-router-dom";
 import "./HomePage.css";
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import welcome1 from './assets/workout6.jpg'
-import welcome2 from './assets/workout5.jpg'
-import welcome3 from './assets/welcomeHome.jpg'
-import welcome4 from './assets/FoodPlanning.jpg'
+import FooterNav from "./FooterNav";
+import chatAIIcon from './assets/ai-icon.jpg'; // Add your Chat AI icon image here
+import welcome1 from './assets/workout6.jpg';
+import welcome2 from './assets/workout5.jpg';
+import welcome3 from './assets/welcomeHome.jpg';
+import welcome4 from './assets/FoodPlanning.jpg';
+
 const HomePage = () => {
+  const navigate = useNavigate();
+
   const carouselImages = [
-    {
-      id: 1,
-      src: welcome1,
-      alt: "Gym Schedule",
-    },
-    {
-      id: 2,
-      src: welcome2,
-      alt: "Diet Plan",
-    },
-    {
-      id: 3,
-      src: welcome3,
-      alt: "Gym Updates",
-    },
-    {
-      id: 4,
-      src: welcome4,
-      alt: "Food Planning",
-    },
+    { id: 1, src: welcome1, alt: "Gym Schedule" },
+    { id: 2, src: welcome2, alt: "Diet Plan" },
+    { id: 3, src: welcome3, alt: "Gym Updates" },
+    { id: 4, src: welcome4, alt: "Food Planning" },
   ];
 
-  // Slider settings for the carousel
   const settings = {
     dots: true,
     infinite: true,
@@ -39,25 +28,36 @@ const HomePage = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 5000, // Slide changes every 5 seconds
+    autoplaySpeed: 5000,
     pauseOnHover: true,
   };
 
   return (
     <div className="homepage">
-      {/* Header Section */}
       <header className="header1">
         <div className="header-left">
           <button className="menu-icon">☰</button>
           <h1 className="brand-name">Buffalo</h1>
         </div>
-        <div className="search-bar-container">
-          <input type="text" className="search-bar" placeholder="Search here" />
-          <button className="search-icon">🔍</button>
+        <div className="header-right">
+          <div className="search-bar-container">
+            <input type="text" className="search-bar" placeholder="Search here" />
+            <button className="search-icon">🔍</button>
+          </div>
+          {/* Chat AI Icon */}
+          <button 
+            className="chat-ai-icon-button" 
+            onClick={() => navigate("/chat-ai")}
+          >
+            <img 
+              src={chatAIIcon} 
+              alt="Chat AI" 
+              className="chat-ai-icon" 
+            />
+          </button>
         </div>
       </header>
 
-      {/* Welcome Section with Slider */}
       <section className="welcome-section">
         <Slider {...settings}>
           {carouselImages.map((image) => (
@@ -75,16 +75,9 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-
-      {/* Other Sections (Nav Buttons and Cards) */}
-      <nav className="nav-buttons">
-        <button className="nav-button">Home</button>
-        <button className="nav-button">Workout</button>
-        <button className="nav-button">Settings</button>
-      </nav>
       <section className="card-section">
         <div className="card">
-          <img src= {welcome1} alt="Gym Schedule" />
+          <img src={welcome1} alt="Gym Schedule" />
           <p>Gym Schedule</p>
           <button className="favorite-button">❤️</button>
         </div>
@@ -104,6 +97,8 @@ const HomePage = () => {
           <button className="favorite-button">❤️</button>
         </div>
       </section>
+
+      <FooterNav /> {/* Footer Navigation */}
     </div>
   );
 };
