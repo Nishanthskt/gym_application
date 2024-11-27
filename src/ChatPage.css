@@ -16,6 +16,20 @@
     padding: 10px 0;
     background-color: rgba(0, 0, 0, 0.7);
   }
+  .back-button {
+    position: absolute;
+    left: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .back-button:hover {
+    color: #ccc;
+  }
+  
   
   .ai-icon {
     width: 50px;

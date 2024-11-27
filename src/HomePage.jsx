@@ -36,7 +36,12 @@ const HomePage = () => {
     <div className="homepage">
       <header className="header1">
         <div className="header-left">
-          <button className="menu-icon">☰</button>
+        <button 
+            className="menu-icon" 
+              onClick={() => navigate("/profile")}
+             > 
+               ☰
+             </button>   
           <h1 className="brand-name">Buffalo</h1>
         </div>
         <div className="header-right">

@@ -8,6 +8,7 @@ import VegNonVegPage from "./vegNonVegPage";
 import BodyTypeSelectionPage from "./BodyTypeSelectionPage";
 import AgePage from "./AgePage";
 import ChatPage from "./ChatPage";
+import ProfilePage from "./ProfilePage";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
         <Route path="/age-page" element={<AgePage/>}/>
         <Route path="/chat-ai" element={<ChatPage/>}/>
         <Route path="/home" element={<HomePage />} />
+        <Route path="/profile" element={<ProfilePage/>}/>
       </Routes>
     </Router>
   );

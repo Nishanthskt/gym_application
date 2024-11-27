@@ -1,11 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation
 import "./ChatPage.css";
-import ChatBackground from "./assets/chat-background.jpg"; 
-import UserIcon from "./assets/user-icon.jpg"; 
-import AIIcon from "./assets/ai-icon.jpg"; 
+import ChatBackground from "./assets/chat-background.jpg";
+import UserIcon from "./assets/user-icon.jpg";
+import AIIcon from "./assets/ai-icon.jpg";
 
 const ChatPage = () => {
-  const isMobileView = window.innerWidth <= 768; 
+  const isMobileView = window.innerWidth <= 768;
+  const navigate = useNavigate(); // Initialize navigation
 
   return (
     <div
@@ -14,8 +16,12 @@ const ChatPage = () => {
         backgroundImage: isMobileView ? `url(${ChatBackground})` : "none",
       }}
     >
-      {/* AI Icon */}
+      {/* Chat Header */}
       <div className="chat-header">
+        {/* Back Button */}
+        <button className="back-button" onClick={() => navigate("/home")}>
+          ←
+        </button>
         <img src={AIIcon} alt="AI" className="ai-icon" />
         <h2 className="chat-title">BUFFALO AI</h2>
       </div>
@@ -39,11 +45,7 @@ const ChatPage = () => {
       {/* Input Section */}
       <div className="chat-input">
         <button className="icon-button">📷</button>
-        <input
-          type="text"
-          placeholder="Ask Buffalo AI"
-          className="text-input"
-        />
+        <input type="text" placeholder="Ask Buffalo AI" className="text-input" />
         <button className="icon-button">😊</button>
       </div>
     </div>
