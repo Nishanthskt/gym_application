@@ -75,30 +75,19 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+     
       <section className="card-section">
-        <div className="card">
-          <img src={welcome1} alt="Gym Schedule" />
-          <p>Gym Schedule</p>
+        {carouselImages.map((image, index) => (
+          <div key={index} className="card">
+          <img src={image.src} alt={image.alt} />
+          <p>{image.alt}</p>
           <button className="favorite-button">❤️</button>
-        </div>
-        <div className="card">
-          <img src={welcome2} alt="Diet Plan" />
-          <p>Diet Plan</p>
-          <button className="favorite-button">❤️</button>
-        </div>
-        <div className="card">
-          <img src={welcome3} alt="Gym Updates" />
-          <p>Gym Updates</p>
-          <button className="favorite-button">❤️</button>
-        </div>
-        <div className="card">
-          <img src={welcome4} alt="Food Plan" />
-          <p>Food Plan</p>
-          <button className="favorite-button">❤️</button>
-        </div>
-      </section>
-
+         </div>
+           ))}
+         </section>
+      <footer className="footer">
       <FooterNav /> {/* Footer Navigation */}
+      </footer>
     </div>
   );
 };
