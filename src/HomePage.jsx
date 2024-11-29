@@ -1,27 +1,39 @@
 import React from "react";
 import Slider from "react-slick";
 import { useNavigate } from "react-router-dom";
-import "./HomePage.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "./HomePage.css";
 import FooterNav from "./FooterNav";
-import chatAIIcon from './assets/ai-icon.jpg'; // Add your Chat AI icon image here
-import welcome1 from './assets/workout6.jpg';
-import welcome2 from './assets/workout5.jpg';
-import welcome3 from './assets/welcomeHome.jpg';
-import welcome4 from './assets/FoodPlanning.jpg';
+import Welcome1 from './assets/welcomeHome.jpg'
+import Welcome2 from './assets/workout6.jpg'
+import Welcome3 from './assets/workout5.jpg'
+import Weightlossimg from './assets/workout1.jpg'
+import strengthimg from './assets/workout2.jpg'
+import yogaimg from './assets/workout4.jpg'
+import cardioimg from './assets/workout3.jpg'
+import ChataiImg from './assets/ai-icon.jpg'
+import logo from './assets/logo.png'
+
+
 
 const HomePage = () => {
   const navigate = useNavigate();
 
-  const carouselImages = [
-    { id: 1, src: welcome1, alt: "Gym Schedule" },
-    { id: 2, src: welcome2, alt: "Diet Plan" },
-    { id: 3, src: welcome3, alt: "Gym Updates" },
-    { id: 4, src: welcome4, alt: "Food Planning" },
+  const bannerImages = [
+    { id: 1, src: Welcome1, alt: "Join Our Team" },
+    { id: 2, src:Welcome2 , alt: "Gym Facilities" },
+    { id: 3, src:Welcome3 , alt: "Healthy Diet" },
   ];
 
-  const settings = {
+  const programs = [
+    { id: 1, src: Weightlossimg, title: "Weight Loss", link: "/weight-loss" },
+    { id: 2, src: strengthimg, title: "Strength Training", link: "/strength-training" },
+    { id: 3, src: yogaimg, title: "Yoga", link: "/yoga" },
+    { id: 4, src: cardioimg, title: "Cardio", link: "/cardio" },
+  ];
+
+  const sliderSettings = {
     dots: true,
     infinite: true,
     speed: 500,
@@ -34,64 +46,67 @@ const HomePage = () => {
 
   return (
     <div className="homepage">
+      {/* Header */}
       <header className="header1">
-        <div className="header-left">
-        <button 
-            className="menu-icon" 
-              onClick={() => navigate("/profile")}
-             > 
-               ☰
-             </button>   
-          <h1 className="brand-name">Buffalo</h1>
-        </div>
-        <div className="header-right">
-          <div className="search-bar-container">
-            <input type="text" className="search-bar" placeholder="Search here" />
-            <button className="search-icon">🔍</button>
-          </div>
-          {/* Chat AI Icon */}
-          <button 
-            className="chat-ai-icon-button" 
-            onClick={() => navigate("/chat-ai")}
-          >
-            <img 
-              src={chatAIIcon} 
-              alt="Chat AI" 
-              className="chat-ai-icon" 
-            />
-          </button>
-        </div>
-      </header>
+  <div className="header-left">
+    {/* <img src={logo} alt="Buffalo Gym Logo" className="header-logo" /> */}
+    <h1 className="brand-name">Buffalo</h1>
+  </div>
+  <div className="header-right">
+    <div className="search-bar-container">
+      <input type="text" className="search-bar" placeholder="Search here" />
+      <button className="search-icon">🔍</button>
+    </div>
+    <button 
+      className="chat-ai-icon-button" 
+      onClick={() => navigate("/chat-ai")}
+    >
+      <img 
+        src={ChataiImg} 
+        alt="Chat AI" 
+        className="chat-ai-icon" 
+      />
+    </button>
+  </div>
+</header>
 
-      <section className="welcome-section">
-        <Slider {...settings}>
-          {carouselImages.map((image) => (
-            <div key={image.id} className="slide-container">
-              <img src={image.src} alt={image.alt} className="welcome-image" />
+
+      {/* Banner Section */}
+      <section className="banner">
+        <Slider {...sliderSettings}>
+          {bannerImages.map((image) => (
+            <div
+              key={image.id}
+              className="slide"
+              onClick={() => navigate(image.link)}
+            >
+              <img src={image.src} alt={image.alt} className="banner-image" />
+              <h2 className="banner-text">{image.alt}</h2>
             </div>
           ))}
         </Slider>
-        <div className="welcome-text">
-          <h2>Welcome To New Team</h2>
-          <p>Available 1 December - 3 December 2025</p>
-          <div className="discount">
-            <button>50% OFF</button>
-            <button>50% OFF</button>
-          </div>
+      </section>
+
+      {/* Programs Section */}
+      <section className="programs">
+        <h2>Our Programs</h2>
+        <div className="program-grid">
+          {programs.map((program) => (
+            <div
+              key={program.id}
+              className="program-card"
+              onClick={() => navigate(program.link)}
+            >
+              <img src={program.src} alt={program.title} className="program-image" />
+              <h3>{program.title}</h3>
+            </div>
+          ))}
         </div>
       </section>
-     
-      <section className="card-section">
-        {carouselImages.map((image, index) => (
-          <div key={index} className="card">
-          <img src={image.src} alt={image.alt} />
-          <p>{image.alt}</p>
-          <button className="favorite-button">❤️</button>
-         </div>
-           ))}
-         </section>
+
+      {/* Footer */}
       <footer className="footer">
-      <FooterNav /> {/* Footer Navigation */}
+        <FooterNav/>
       </footer>
     </div>
   );
