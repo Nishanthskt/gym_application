@@ -190,14 +190,14 @@
     width: 90%; /* Adjust search bar width */
     padding: 8px;
   }
-}
+
   .program-grid {
     grid-template-columns: repeat(2, 1fr);
   }
   .search-icon{
     display: none;
   }
-
+}
 
 @media (max-width: 480px) {
   .header1 {
@@ -216,7 +216,7 @@
   .search-bar {
     width: 100%; /* Ensure full-width for small screens */
   }
-}
+
   .banner-image {
     height: 200px;
   }
@@ -227,4 +227,4 @@
   .program-grid {
     grid-template-columns: repeat(2,1fr);
   }
-
+}
