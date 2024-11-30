@@ -13,7 +13,6 @@ import strengthimg from './assets/workout2.jpg'
 import yogaimg from './assets/workout4.jpg'
 import cardioimg from './assets/workout3.jpg'
 import ChataiImg from './assets/ai-icon.jpg'
-import logo from './assets/logo.png'
 
 
 
