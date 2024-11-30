@@ -72,7 +72,7 @@ const HomePage = () => {
 
 
       {/* Banner Section */}
-      <section className="banner">
+      <section className="banner1">
         <Slider {...sliderSettings}>
           {bannerImages.map((image) => (
             <div
@@ -80,8 +80,8 @@ const HomePage = () => {
               className="slide"
               onClick={() => navigate(image.link)}
             >
-              <img src={image.src} alt={image.alt} className="banner-image" />
-              <h2 className="banner-text">{image.alt}</h2>
+              <img src={image.src} alt={image.alt} className="banner1-image" />
+              <h2 className="banner1-text">{image.alt}</h2>
             </div>
           ))}
         </Slider>
