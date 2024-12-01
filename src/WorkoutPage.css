@@ -10,6 +10,20 @@
     background-color: #ff4040;
     padding: 10px;
   }
+  .back-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .back-button:hover {
+    color: #ffa500; 
+  }
   
   .logo {
     width: 60px;
@@ -17,6 +31,8 @@
   }
   
   h1 {
+   margin-left: 30px;
+   margin-top: 20px;
     color: white;
   }
   
@@ -93,7 +109,7 @@
     width: 100%; 
     cursor: pointer;
   }
-  .workout-description:hover ::after {
+  .workout-description :hover ::after {
     content: attr(data-full-description); 
     position: absolute;
     left: 0;

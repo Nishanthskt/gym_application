@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { FaArrowLeft } from 'react-icons/fa';
 import './WorkoutPage.css'; 
 import { FaHeart } from 'react-icons/fa';
 import Week1 from './assets/week1.jpg' 
@@ -41,10 +43,14 @@ const WorkoutPage = () => {
       image: Week5,
     },
   ];
+  const navigate = useNavigate(); 
 
   return (
     <div className="workout-page">
       <header className="workout-header">
+        <button className="back-button" onClick={() => navigate('/home')}>
+          <FaArrowLeft />
+        </button>
         {/* <img src={logo} alt="Buffalo Gym Logo" className="logo" /> */}
         <h1>BUFFALO</h1>
       </header>
