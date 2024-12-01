@@ -1,49 +1,163 @@
+/* Profile Page General Styling */
 .profile-page {
-    background-color:  #c7e7d8;
-    padding: 20px;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .profile-header {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  
-  .profile-image {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-  }
-  
-  .profile-title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-top: 10px;
-  }
-  
-  .profile-form {
-    width: 100%;
-    max-width: 400px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .profile-form input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    background-color: #d3d3d3;
-    height: 50px;
-    margin: 10px;
-    border-radius: 10px;
-    font-size: 16px;
-    outline: none;
-  }
-  
-  
+  font-family: Arial, sans-serif;
+  color: #333;
+  background: #eaf4ec;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Header Section */
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+}
+
+/* Back Button Styling */
+.back-button {
+  background: none;
+  border: none;
+  color: gray;
+  font-size: 20px;
+  cursor: pointer;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.back-button:hover {
+  color: #22c55e; /* Highlight on hover */
+}
+
+/* Profile Info */
+.profile-info {
+  margin-top: 20px;
+}
+
+.profile-picture {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.user-name {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #064e3b;
+}
+
+/* Stats Button */
+.stats-button {
+  background: #4ade80;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin: 15px 0;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.stats-button:hover {
+  background: #22c55e;
+}
+
+/* My Journey Section */
+.my-journey {
+  margin-top: 20px;
+}
+
+.my-journey h3 {
+  text-align: left;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.journey-stats {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 15px;
+}
+
+.stat-box {
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  width: 80px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stat-box p:first-child {
+  font-size: 16px;
+  font-weight: bold;
+  color: #064e3b;
+}
+
+.calendar-box {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-box img {
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+  border-radius: 7px;
+}
+
+.calendar-box p {
+  flex: 1;
+  text-align: left;
+  margin: 0;
+}
+
+.calendar-box .arrow {
+  font-size: 20px;
+  color: #064e3b;
+}
+
+/* Settings Section */
+.settings {
+  margin-top: 20px;
+}
+
+.settings h3 {
+  text-align: left;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.settings-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+  margin: 10px 0;
+}
+
+.option svg {
+  font-size: 24px;
+  color: #064e3b;
+}
+
+.option p {
+  margin-top: 5px;
+  font-size: 14px;
+}

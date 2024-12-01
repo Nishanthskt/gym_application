@@ -10,7 +10,7 @@ const FooterNav = () => {
 
   return (
     <div className="footer-nav">
-      <button className="footer-button" onClick={() => navigate("/home")}>
+      <button className="footer-button" onClick={() => navigate("/profile")}>
         <img src={homeIcon} alt="Home" />
       </button>
       <button className="footer-button" onClick={() => navigate("/workout")}>

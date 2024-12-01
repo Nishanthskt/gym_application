@@ -1,23 +1,86 @@
 import React from "react";
-import FooterNav from "./FooterNav"; // Use the same FooterNav component
-import usericon from "./assets/user-icon.jpg";
-import "./ProfilePage.css"; // Create a separate CSS file for the profile page
+import "./ProfilePage.css";
+import { FaCalendarAlt, FaPen, FaUtensils, FaDumbbell, FaBell } from "react-icons/fa";
+import logo from './assets/logo.png'
+import usericonImg from './assets/user-icon.jpg'
+import callenderimg from './assets/callender.jpg'
+import { useNavigate } from "react-router-dom"; 
+import { FaArrowLeft } from "react-icons/fa";
 
 const ProfilePage = () => {
+  const navigate = useNavigate();
   return (
     <div className="profile-page">
-      <div className="profile-header">
-        <img src={usericon} alt="Profile" className="profile-image" />
-        <h1 className="profile-title">User Profile</h1>
+      {/* Header Section */}
+      <header className="profile-header">
+      <button className="back-button" onClick={() => navigate("/home")}>
+          <FaArrowLeft />
+        </button>
+        {/* <img src={logo} alt="Buffalo Gym Logo" className="logo" /> */}
+      </header>
+
+      {/* Profile Info Section */}
+      <div className="profile-info">
+        <img
+          src={usericonImg} 
+          alt="User"
+          className="profile-picture"
+        />
+        <h2 className="user-name">User Name</h2>
       </div>
-      <div className="profile-form">
-        <input type="text" placeholder="Name" />
-        <input type="email" placeholder="Email" />
-        <input type="password" placeholder="Password" />
-        <input type="date" placeholder="Date of Birth" />
-        <input type="text" placeholder="BMI" />
+
+      {/* Stats Button */}
+      <button className="stats-button">Stats</button>
+
+      {/* My Journey Section */}
+      <div className="my-journey">
+        <h3>My Journey</h3>
+        <div className="journey-stats">
+          <div className="stat-box">
+            <p>0</p>
+            <p>Calories</p>
+          </div>
+          <div className="stat-box">
+            <p>0</p>
+            <p>Workout</p>
+          </div>
+          <div className="stat-box">
+            <p>0</p>
+            <p>Minutes</p>
+          </div>
+        </div>
+        <div className="calendar-box">
+          <img
+            src={callenderimg}
+            alt="Calendar"
+          />
+          <p>Calendar</p>
+          <span className="arrow">→</span>
+        </div>
       </div>
-        <FooterNav />
+
+      {/* Settings Section */}
+      <div className="settings">
+        <h3>Settings</h3>
+        <div className="settings-options">
+          <div className="option">
+            <FaPen />
+            <p>Edit Profile</p>
+          </div>
+          <div className="option">
+            <FaUtensils />
+            <p>Food</p>
+          </div>
+          <div className="option">
+            <FaDumbbell />
+            <p>Fitness Plan</p>
+          </div>
+          <div className="option">
+            <FaBell />
+            <p>Reminders</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
