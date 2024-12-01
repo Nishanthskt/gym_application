@@ -30,7 +30,7 @@ const ProfilePage = () => {
       </div>
 
       {/* Stats Button */}
-      <button className="stats-button">Stats</button>
+      <button className="stats-button" onClick={()=> navigate("/stat")}>Stats</button>
 
       {/* My Journey Section */}
       <div className="my-journey">

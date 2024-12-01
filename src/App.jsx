@@ -10,6 +10,7 @@ import AgePage from "./AgePage";
 import ChatPage from "./ChatPage";
 import ProfilePage from "./ProfilePage";
 import WorkoutPage from "./WorkoutPage";
+import StatPage from "./StatPage";
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
         <Route path="/chat-ai" element={<ChatPage/>}/>
         <Route path="/home" element={<HomePage />} />
         <Route path="/profile" element={<ProfilePage/>}/>
+        <Route path="/stat" element ={<StatPage/>}/>
         <Route path="/workout" element={<WorkoutPage/>}/>
       </Routes>
     </Router>
