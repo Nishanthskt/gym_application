@@ -1,0 +1,163 @@
+.workout-page {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+  }
+  
+  .workout-header {
+    display: flex;
+    align-items: center;
+    background-color: #ff4040;
+    padding: 10px;
+  }
+  
+  .logo {
+    width: 60px;
+    margin-right: 5px;
+  }
+  
+  h1 {
+    color: white;
+  }
+  
+  .workout-search {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: white;
+  }
+  
+  .search-bar {
+    flex: 1;
+    padding: 5px;
+    margin-right: 10px;
+  }
+  
+  .plan-button {
+    background-color: #ffa500;
+    border: none;
+    padding: 5px 10px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .workout-categories {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+  }
+  
+  .category-button {
+    background-color: #ff4040;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .workout-list {
+    padding: 10px;
+  }
+  
+  .workout-card {
+    background-color: white;
+    border-radius: 10px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 10px;
+  }
+  
+  .workout-image {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .workout-details {
+    flex: 1;
+  }
+  
+  .workout-actions {
+    display: flex;
+    gap: 10px;
+  }
+  .workout-description {
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100%; 
+    cursor: pointer;
+  }
+  .workout-description:hover ::after {
+    content: attr(data-full-description); 
+    position: absolute;
+    left: 0;
+    top: 120%; 
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: normal;
+    width: max-content;
+    z-index: 10;
+    font-size: 14px;
+  }
+  
+  .start-button, .end-button {
+    background-color: #ffa500;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .workout-week {
+    font-weight: bold;
+  }
+  
+  .favorite-button {
+    background: none;
+    border: none;
+    font-size: 15px;
+    color: rgb(241, 78, 78);
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    transition: background-color 0.3s ease;
+    border-radius: 50%;
+    padding: 8px;
+  }
+  .favorite-button:hover {
+    background-color: rgba(255, 0, 0, 0.1);
+  }
+  .favorite-active {
+    background-color: red;
+    color: white;
+  }
+  
+  .favorite-active:hover {
+    background-color: darkred;
+  }
+  
+  .workout-footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ff4040;
+    padding: 10px;
+    color: white;
+  }
+  
+  .top-up-button {
+    background-color: white;
+    color: #ff4040;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
