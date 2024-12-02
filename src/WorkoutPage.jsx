@@ -48,7 +48,7 @@ const WorkoutPage = () => {
   return (
     <div className="workout-page">
       <header className="workout-header">
-        <button className="back-button" onClick={() => navigate('/home')}>
+        <button className="back-button1" onClick={() => navigate('/home')}>
           <FaArrowLeft />
         </button>
         {/* <img src={logo} alt="Buffalo Gym Logo" className="logo" /> */}

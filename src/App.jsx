@@ -11,6 +11,7 @@ import ChatPage from "./ChatPage";
 import ProfilePage from "./ProfilePage";
 import WorkoutPage from "./WorkoutPage";
 import StatPage from "./StatPage";
+import SettingsPage from "./SettingsPage";
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
         <Route path="/home" element={<HomePage />} />
         <Route path="/profile" element={<ProfilePage/>}/>
         <Route path="/stat" element ={<StatPage/>}/>
+        <Route path="/settings" element={<SettingsPage />} />
         <Route path="/workout" element={<WorkoutPage/>}/>
       </Routes>
     </Router>

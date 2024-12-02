@@ -10,7 +10,7 @@
     background-color: #ff4040;
     padding: 10px;
   }
-  .back-button {
+  .back-button1 {
     background: none;
     border: none;
     color: white;
@@ -21,7 +21,7 @@
     align-items: center;
   }
   
-  .back-button:hover {
+  .back-button1:hover {
     color: #ffa500; 
   }
   
