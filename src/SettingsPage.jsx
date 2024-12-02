@@ -8,6 +8,7 @@ import gymupdateImg from './assets/gymupdate.jpg';
 import newgoalImg from './assets/newgoal.jpg';
 import annualupdateImg from './assets/annualupdate.jpg';
 import dietupdateImg from './assets/dietupdate.jpg';
+import aremsvg from './assets/arm.png';
 
 const SettingsPage = () => {
   const navigate = useNavigate();
@@ -34,10 +35,19 @@ const SettingsPage = () => {
         <button className="back-button" onClick={handleBack}>
           <span>&#8592;</span> {/* Backward arrow icon */}
         </button>
-        <h1>Buffalo Settings</h1>
       </header>
 
-      {/* Settings Options */}
+      {/* Buffalo Settings Container */}
+      <div className="buffalo-settings-container">
+        <img
+          src={aremsvg}
+          alt="Buffalo Logo"
+          className="arm-logo"
+        />
+        <h2 className="settings-title">Buffalo Settings</h2>
+      </div>
+
+      {/* Settings Grid */}
       <div className="settings-grid">
         {cards.map((card) => (
           <div className="settings-card" key={card.id}>
