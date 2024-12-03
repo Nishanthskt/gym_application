@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { FaArrowLeft } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 import "./WorkoutChallenge.css";
 import logo from './assets/logo.png';
 
 const WorkoutChallenge = () => {
   const [progress, setProgress] = useState(33); // Initial progress (can be dynamic)
+  const navigate = useNavigate(); // For navigation
 
   // Simulate loader progress dynamically
   useEffect(() => {
@@ -18,7 +20,7 @@ const WorkoutChallenge = () => {
     <div className="challenge-container">
       {/* Header and Progress Section */}
       <div className="challenge-header">
-        <button className="back-button" onClick={() => window.history.back()}>
+        <button className="back-button" onClick={() => navigate(-1)}>
           <FaArrowLeft />
         </button>
         <h1>FULL BODY CHALLENGE</h1>
@@ -45,11 +47,14 @@ const WorkoutChallenge = () => {
       </div>
 
       <div className="challenge-days">
-        {["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6","Day 7"].map(
+        {["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "Day 7"].map(
           (day, index) => (
             <div
               className={`day-card ${index === 2 ? "active" : ""}`} 
               key={index}
+              onClick={() => {
+                if (index === 2) navigate("/day3");
+              }} // Navigate to Day 3 page
             >
               <span>{day}</span>
               <button className="day-button">{index === 2 ? "🔘" : "➡️"}</button>
