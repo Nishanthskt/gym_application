@@ -12,6 +12,7 @@ import ProfilePage from "./ProfilePage";
 import WorkoutPage from "./WorkoutPage";
 import StatPage from "./StatPage";
 import SettingsPage from "./SettingsPage";
+import WorkoutChallenge from "./WorkoutChallenge";
 
 const App = () => {
   return (
@@ -29,6 +30,7 @@ const App = () => {
         <Route path="/stat" element ={<StatPage/>}/>
         <Route path="/settings" element={<SettingsPage />} />
         <Route path="/workout" element={<WorkoutPage/>}/>
+        <Route path="/workout-challenge" element ={<WorkoutChallenge/>}/>
       </Routes>
     </Router>
   );

@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { FaArrowLeft } from 'react-icons/fa';
-import './WorkoutPage.css'; 
-import { FaHeart } from 'react-icons/fa';
-import Week1 from './assets/week1.jpg' 
-import Week2 from './assets/week2.jpg' 
-import Week3 from './assets/week3.jpg' 
-import Week4 from './assets/week4.jpg' 
-import Week5 from './assets/week5.jpg' 
-import logo from './assets/logo.png'
+import { FaArrowLeft, FaHeart } from 'react-icons/fa';
+import './WorkoutPage.css';
+import Week1 from './assets/week1.jpg';
+import Week2 from './assets/week2.jpg';
+import Week3 from './assets/week3.jpg';
+import Week4 from './assets/week4.jpg';
+import Week5 from './assets/week5.jpg';
 
 const WorkoutPage = () => {
   const workouts = [
@@ -43,7 +41,8 @@ const WorkoutPage = () => {
       image: Week5,
     },
   ];
-  const navigate = useNavigate(); 
+
+  const navigate = useNavigate();
 
   return (
     <div className="workout-page">
@@ -51,7 +50,6 @@ const WorkoutPage = () => {
         <button className="back-button1" onClick={() => navigate('/home')}>
           <FaArrowLeft />
         </button>
-        {/* <img src={logo} alt="Buffalo Gym Logo" className="logo" /> */}
         <h1>BUFFALO</h1>
       </header>
       <div className="workout-search">
@@ -65,7 +63,7 @@ const WorkoutPage = () => {
       </div>
       <div className="workout-list">
         {workouts.map((workout, index) => (
-          <WorkoutCard key={index} workout={workout} />
+          <WorkoutCard key={index} workout={workout} navigate={navigate} />
         ))}
       </div>
       <footer className="workout-footer">
@@ -79,42 +77,48 @@ const WorkoutPage = () => {
   );
 };
 
-const WorkoutCard = ({ workout }) => {
-    const [isFavorite, setIsFavorite] = useState(false);
-  
-    const toggleFavorite = () => {
-      setIsFavorite(!isFavorite);
-    };
-  
-    const truncateDescription = (text, wordLimit) => {
-      const words = text.split(" ");
-      return words.length > wordLimit ? words.slice(0, wordLimit).join(" ") + "..." : text;
-    };
-  
-    return (
-      <div className="workout-card">
-        <img src={workout.image} alt={workout.title} className="workout-image" />
-        <div className="workout-details">
-          <h3>{workout.title}</h3>
-          <p
-            className="workout-description"
-            data-full-description={workout.description}
-          >
-            {truncateDescription(workout.description, 3)}
-          </p>
-          <div className="workout-actions">
-            <button className="start-button">Start</button>
-            <button className="end-button">End</button>
-          </div>
-          <span className="workout-week">{workout.week}</span>
-        </div>
-        <button
-          className={`favorite-button ${isFavorite ? "favorite-active" : ""}`}
-          onClick={toggleFavorite}
-        >
-          <FaHeart />
-        </button>
-      </div>
-    );
+const WorkoutCard = ({ workout, navigate }) => {
+  const [isFavorite, setIsFavorite] = useState(false);
+
+  const toggleFavorite = () => {
+    setIsFavorite(!isFavorite);
   };
+
+  const truncateDescription = (text, wordLimit) => {
+    const words = text.split(" ");
+    return words.length > wordLimit ? words.slice(0, wordLimit).join(" ") + "..." : text;
+  };
+
+  return (
+    <div className="workout-card">
+      <img src={workout.image} alt={workout.title} className="workout-image" />
+      <div className="workout-details">
+        <h3>{workout.title}</h3>
+        <p
+          className="workout-description"
+          data-full-description={workout.description}
+        >
+          {truncateDescription(workout.description, 3)}
+        </p>
+        <div className="workout-actions">
+          <button
+            className="start-button"
+            onClick={() => navigate('/workout-challenge')} // Navigate to WorkoutChallenge
+          >
+            Start
+          </button>
+          <button className="end-button">End</button>
+        </div>
+        <span className="workout-week">{workout.week}</span>
+      </div>
+      <button
+        className={`favorite-button ${isFavorite ? "favorite-active" : ""}`}
+        onClick={toggleFavorite}
+      >
+        <FaHeart />
+      </button>
+    </div>
+  );
+};
+
 export default WorkoutPage;

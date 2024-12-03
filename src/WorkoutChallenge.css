@@ -1,0 +1,111 @@
+/* Overall container */
+.challenge-container {
+    font-family: Arial, sans-serif;
+    color: #000;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: #f9f9f9;
+    padding: 0;
+  }
+  
+  /* Header with gradient background */
+  .challenge-header {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Warm gradient */
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px; /* Adjust height for header */
+  }
+  
+  .back-button {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .challenge-header h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  /* Progress section */
+  .progress-container {
+    background: linear-gradient(135deg, #feb47b, #ff7e5f); /* Gradient matching header */
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  .progress-bar {
+    width: 80%;
+    height: 10px;
+    background: #555;
+    border-radius: 5px;
+    margin: 10px auto;
+    position: relative;
+  }
+  
+  .progress-fill {
+    height: 100%;
+    background: #00ff00; /* Green loader */
+    border-radius: 5px;
+    transition: width 0.2s ease-in-out;
+  }
+  
+  /* Intro Section */
+  .challenge-intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.05); /* Slight gray overlay */
+    padding: 10px;
+    border-radius: 10px;
+    margin: 20px auto;
+  }
+  
+  .challenge-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  /* Day Containers */
+  .challenge-days {
+    margin: 20px 0;
+  }
+  
+  .day-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff; /* White background */
+    color: #000; /* Black text */
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 5px 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .day-card.active {
+    background: #00bcd4; /* Highlight color */
+    color: #fff;
+  }
+  
+  .day-button {
+    background: transparent;
+    border: none;
+    color: #000;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .day-card.active .day-button {
+    color: #fff;
+  }
+  
