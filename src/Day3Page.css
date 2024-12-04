@@ -1,0 +1,113 @@
+/* General Styles */
+.page-container {
+    font-family: Arial, sans-serif;
+    padding: 16px;
+    background-color: #fff;
+    height: 100vh;
+  }
+  
+  /* Header Section */
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  
+  .header-content {
+    position: absolute;
+    top: 20px;
+    left: 16px;
+    z-index: 1;
+    color: #fff;
+  }
+  
+  .day-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .workout-info {
+    font-size: 16px;
+    margin: 4px 0;
+  }
+  
+  .header-image {
+    width: 100%;
+    border-radius: 12px;
+    max-height: 200px;
+    object-fit: cover;
+  }
+  
+  /* Workout List Section */
+  .workout-container {
+    margin-top: 16px;
+    padding: 0 16px;
+  }
+  
+  .workout-header2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .workout-summary {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  /* Add specific styles for the Lottie animations */
+.workout-animation {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  /* Individual Workout Item */
+  .workout-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .icon-placeholder {
+    margin-right: 16px;
+  }
+  
+  .workout-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+  }
+  
+  .workout-details {
+    flex-grow: 1;
+  }
+  
+  .workout-name {
+    font-size: 16px;
+    margin: 0 0 4px 0;
+  }
+  
+  .workout-metrics {
+    font-size: 14px;
+    color: #888;
+    margin: 0;
+  }
+  
+  /* Start Button */
+  .start-button {
+    margin-top: 16px;
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    color: #fff;
+    background-color: green;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  

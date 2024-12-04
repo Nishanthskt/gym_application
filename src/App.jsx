@@ -13,7 +13,8 @@ import WorkoutPage from "./WorkoutPage";
 import StatPage from "./StatPage";
 import SettingsPage from "./SettingsPage";
 import WorkoutChallenge from "./WorkoutChallenge";
-import Day3Workout from "./Day3Workout";
+import Day3Page from "./Day3Page";
+
 
 const App = () => {
   return (
@@ -32,7 +33,7 @@ const App = () => {
         <Route path="/settings" element={<SettingsPage />} />
         <Route path="/workout" element={<WorkoutPage/>}/>
         <Route path="/workout-challenge" element ={<WorkoutChallenge/>}/>
-        <Route path="/day3" element ={<Day3Workout/>}/>
+        <Route path="day3" element ={<Day3Page/>}/>
       </Routes>
     </Router>
   );
