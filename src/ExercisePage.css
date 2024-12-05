@@ -1,0 +1,135 @@
+.exercise-page {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.exercise-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.exercise-header h1{
+  color: black;
+  margin-left: 30px;
+}
+.back-button {
+  position: absolute;
+  left: 0;
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: black;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.back-button:hover {
+  color: #007bff;
+}
+
+.replace-button {
+  color: blue;
+  text-decoration: underline;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.exercise-content {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.animation-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.video-container {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.youtube-player iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
+.exercise-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tab-button {
+  flex: 2;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: #f1f1f1;
+  font-weight: bold;
+  border-radius: 5px;
+  
+}
+
+.tab-button.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.exercise-details {
+  margin-top: 20px;
+  gap: 20px;
+}
+.exercise-details p{
+  margin-top: 10px;
+  padding: 5px;
+}
+.exercise-details h2{
+  margin-top: 10px;
+}
+.duration-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.duration-control h2{
+  margin-top: 10px;
+}
+.duration-control button {
+  padding: 5px 10px;
+}
+
+.exercise-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+footer button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+footer button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .video-container {
+    max-width: 320px;
+  }
+
+  .exercise-details {
+    padding: 0 10px;
+  }
+}

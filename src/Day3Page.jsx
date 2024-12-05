@@ -1,5 +1,6 @@
 import React from "react";
 import  Lottie  from "lottie-react"; // Import Lottie from lottie-react
+import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation
 import "./Day3Page.css";
 
 // Import your JSON animation files
@@ -7,14 +8,16 @@ import jumpingJacksAnimation from "./animations/cooldown.json";
 import kneePushupsAnimation from "./animations/lunges.json";
 import pushupsAnimation from "./animations/plankhold.json";
 import wideArmPushupsAnimation from "./animations/push-ups.json";
-import headerBgImg from "./assets/dayheader.jpg"
+import headerBgImg from "./assets/dayheader.jpg";
 
 const Day3Page = () => {
+  const navigate = useNavigate(); // Initialize useNavigate hook
+
   const workouts = [
-    { name: "Jumping jacks", time: "00:20", reps: null, animation: jumpingJacksAnimation },
-    { name: "Knee push-ups", time: null, reps: "x6", animation: kneePushupsAnimation },
-    { name: "Push-ups", time: null, reps: "x10", animation: pushupsAnimation },
-    { name: "Wide Arm Push-ups", time: null, reps: "x8", animation: wideArmPushupsAnimation },
+    { name: "Jumping jacks", time: "00:20", reps: null, animation: jumpingJacksAnimation, path: "/jumping-jacks" },
+    { name: "Knee push-ups", time: null, reps: "x6", animation: kneePushupsAnimation, path: "/knee-push-ups" },
+    { name: "Push-ups", time: null, reps: "x10", animation: pushupsAnimation, path: "/push-ups" },
+    { name: "Wide Arm Push-ups", time: null, reps: "x8", animation: wideArmPushupsAnimation, path: "/wide-arm-push-ups" },
   ];
 
   return (
@@ -38,7 +41,11 @@ const Day3Page = () => {
           <p className="workout-summary">9 mins • 11 Workouts</p>
         </div>
         {workouts.map((workout, index) => (
-          <div className="workout-item" key={index}>
+          <div 
+            className="workout-item" 
+            key={index}
+            onClick={() => navigate(workout.path)} // Navigates to the specific workout page
+          >
             <div className="icon-placeholder">
               {/* Use Lottie animation here */}
               <Lottie animationData={workout.animation} loop autoplay className="workout-animation" />

@@ -102,7 +102,7 @@ const WorkoutCard = ({ workout, navigate }) => {
         </p>
         <div className="workout-actions">
           <button
-            className="start-button"
+            className="start-button1"
             onClick={() => navigate('/workout-challenge')} // Navigate to WorkoutChallenge
           >
             Start
