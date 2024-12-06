@@ -1,0 +1,94 @@
+.food-page {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color:#c7e7d8;
+    height: 100vh;
+  }
+  
+  .food-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+  }
+  .backward-arrow {
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+    position: absolute;
+    left: 10px;
+  }
+.food-header h1 {
+    margin-left: 15px;
+    color: black;
+  }
+  .food-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .food-card {
+    display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  background-color:#c7e7d8;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  }
+  .food-details {
+    flex-grow: 1;
+    padding: 0 16px;
+  }
+  
+  .food-details h2 {
+    margin: 0 0 8px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .food-details p {
+    margin: 0 0 8px;
+    color: #666;
+    font-size: 14px;
+  }
+  .food-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .food-info {
+    flex-grow: 1;
+    margin-left: 15px;
+  }
+  
+  .food-date {
+    font-size: 12px;
+    color: #888;
+  }
+  
+  .like-icon {
+    cursor: pointer;
+  }
+  
+  .open-now-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .open-now-button:hover {
+    background-color: #45a049;
+  }
+  

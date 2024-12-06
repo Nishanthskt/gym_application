@@ -15,6 +15,7 @@ import SettingsPage from "./SettingsPage";
 import WorkoutChallenge from "./WorkoutChallenge";
 import Day3Page from "./Day3Page";
 import ExercisePage from "./ExercisePage";
+import FoodPage from "./FoodPage";
 
 
 const App = () => {
@@ -36,6 +37,7 @@ const App = () => {
         <Route path="/workout-challenge" element ={<WorkoutChallenge/>}/>
         <Route path="/day3" element ={<Day3Page/>}/>
         <Route path="/push-ups" element ={<ExercisePage/>}/>
+        <Route path="food" element ={<FoodPage/>}/>
       </Routes>
     </Router>
   );

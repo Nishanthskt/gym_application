@@ -4,6 +4,7 @@ import "./FooterNav.css";
 import homeIcon from "./assets/home-icon.jpg"; // Add your home icon image
 import workoutIcon from "./assets/user-icon.jpg"; // Add your workout icon image
 import settingsIcon from "./assets/settings-icon.jpg"; // Add your settings icon image
+import veganImg from './assets/foodPageVegan.jpg';
 
 const FooterNav = () => {
   const navigate = useNavigate();
@@ -18,6 +19,9 @@ const FooterNav = () => {
       </button>
       <button className="footer-button" onClick={() => navigate("/settings")}>
         <img src={settingsIcon} alt="Settings" />
+      </button>
+      <button className="footer-button" onClick={() => navigate("/food")}>
+        <img src={veganImg} alt="Settings" />
       </button>
     </div>
   );
