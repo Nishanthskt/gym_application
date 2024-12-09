@@ -17,6 +17,7 @@ import Day3Page from "./Day3Page";
 import ExercisePage from "./ExercisePage";
 import FoodPage from "./FoodPage";
 import TodayPlanPage from "./TodayPlanPage";
+import GymUpdatePage from "./GymUpdatePage";
 
 
 const App = () => {
@@ -40,6 +41,7 @@ const App = () => {
         <Route path="/push-ups" element ={<ExercisePage/>}/>
         <Route path="/food" element ={<FoodPage/>}/>
         <Route path="/today" element={<TodayPlanPage/>}/>
+        <Route path="/gymupdate" element={<GymUpdatePage/>}/>
       </Routes>
     </Router>
   );

@@ -8,7 +8,7 @@
 
 /* Homepage Layout */
 .homepage {
-  background-color:#c7e7d8;
+  background-color:gray;
 }
 
 /* Header Section */
@@ -17,7 +17,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: #c7e7d8;
+  background-color: gray;
 }
 .header-logo {
   width: 50px; /* Adjust width */

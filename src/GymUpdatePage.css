@@ -1,0 +1,94 @@
+.gym-update-page {
+    font-family: "Arial", sans-serif;
+    text-align: center;
+    background-color: #d4f2e1;
+    padding: 20px;
+  }
+  
+  .gym-header {
+    position: relative;
+    padding-top: 20px;
+  }
+  
+  .gym-header h3 {
+    color: #333;
+    font-size: 16px;
+    margin: 0;
+  }
+  
+  .gym-header h1 {
+    color: #000;
+    font-size: 32px;
+    margin: 10px 0;
+    font-weight: bold;
+  }
+  
+  .backward-arrow {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    font-size: 24px;
+    color: #000;
+    cursor: pointer;
+  }
+  
+  .gym-main .main-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+    border-radius: 10px;
+  }
+  
+  .gym-main h2 {
+    color: #000;
+    font-size: 20px;
+    margin: 20px 0;
+  }
+  
+  .feedback-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  .rating-container {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .star {
+    font-size: 24px;
+    color: gray;
+    cursor: pointer;
+  }
+  
+  .star.filled {
+    color: gold;
+  }
+  
+  .feedback-button {
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .feedback-button:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .additional-image-section .additional-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+    border-radius: 10px;
+  }
+  
