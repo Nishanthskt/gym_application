@@ -1,0 +1,129 @@
+/* General styles */
+.workout-plan-page {
+    font-family: "Arial", sans-serif;
+    background-color: #d4f2e1;
+    padding: 20px;
+    position: relative;
+  }
+  
+  /* Backward arrow */
+  .backward-arrow {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #000;
+  }
+  
+  /* Slider styling */
+  .image-slider {
+    position: relative;
+    margin: 20px 0;
+  }
+  
+  .slider-image {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  @media (min-width: 1024px) {
+    .slider-image {
+      max-height: 300px;
+    }
+  }
+  
+  .like-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    cursor: pointer;
+  }
+  
+  /* Plan details */
+  .plan-details {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .plan-details h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+  }
+  
+  .plan-details .description {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  /* Reviews section */
+  .reviews-section {
+    margin: 20px 0;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .reviews-section h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .review {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .review-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .review-details h3 {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .review-details p {
+    font-size: 14px;
+    color: #333;
+    margin: 5px 0;
+  }
+  
+  .stars {
+    display: flex;
+  }
+  
+  /* Comments section */
+  .comments-section {
+    display: flex;
+    gap: 10px;
+    background-color: #ff3366;
+    padding: 6px;
+    margin-top: 20px;
+    border-radius: 10px;
+  }
+  
+  .name-input,
+  .comment-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  
+  .submit-button {
+    padding:5px 5px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+  
